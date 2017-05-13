@@ -4,18 +4,13 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap 101 Template</title>
+    <title>New York Times Article Search</title>
 
     <!-- Bootstrap and jQuery -->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <style>
-    .jumbotron h1 {
-      text-align: center;
-      }
-
-    </style>
+    <link href="/assets/css/style.css" rel="stylesheet">
   </head>
   <body>
 
@@ -32,17 +27,63 @@
   <div class="wrapper">
     <div id="main-container" class="container">
       <section class="main-section">
-        
+
+
+      <div class="panel panel-default">
+        <div class="panel-heading"><i class="fa fa-newspaper-o" aria-hidden="true"></i> Search Parameters</div>
+        <div class="panel-body">
+
+          <form>
+            <div class="form-group">
+              <label for="searchTerm">Search Term:</label>
+              <input type="text" class="form-control" id="searchTerm" placeholder="">
+            </div>
+
+            <div class="form-group">
+              <label for="numberToRetrieve">Number of Records to Retrieve:</label>
+               
+              <select class="form-control" id="numberToRetrieve">
+                <option selected>Choose...</option>
+                <option value="5">5</option>
+                <option value="10">10</option>
+                <option value="15">15</option>
+              </select>
+
+
+            </div>
+
+            <div class="form-group">
+              <label for="yearStart">Year Start: (optional)</label>
+              <input type="text" class="form-control" id="yearStart" placeholder="">
+            </div>
+
+            <div class="form-group">
+              <label for="yearEnd">Year End: (optional)</label>
+              <input type="text" class="form-control" id="yearEnd" placeholder="">
+            </div>
+
+            <button type="submit" class="btn btn-default">Search</button><button type="clear" class="btn btn-default">Clear Results</button>
+          </form>
+
+        </div>
+      </div> <!-- closes the panel -->
+
+
+      <div class="panel panel-default">
+        <div class="panel-heading"><i class="fa fa-table" aria-hidden="true"></i> Top Articles</div>
+        <div class="panel-body">
+
+        </div>
+      </div> <!-- closes the panel -->
+
+
+
         
       </section>
     </div>
   </div>
 
 
-  <script type="text/javascript">
-    
-
-
-  </script>
+  <script type="text/javascript" src="assets/javascript/app.js"></script>
   </body>
 </html>
